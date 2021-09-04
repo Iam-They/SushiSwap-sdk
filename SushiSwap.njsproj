@@ -1,0 +1,216 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>SushiSwap</Name>
+    <RootNamespace>SushiSwap</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>54f920bc-a447-4d36-aa8e-fafb6b100882</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".babelrc" />
+    <Content Include=".gitignore" />
+    <Content Include=".prettierrc.js" />
+    <Content Include=".yarnrc" />
+    <Content Include="LICENSE" />
+    <Content Include="research\MultiRouting\.gitignore" />
+    <Content Include="research\MultiRouting\package.json" />
+    <Content Include="research\MultiRouting\tsconfig.json" />
+    <Content Include="research\MultiRouting\webpack.config.js" />
+    <Content Include="research\MultiRouting\yarn.lock" />
+    <Content Include="src\abis\ERC20.json" />
+    <Content Include="src\abis\StopLimitOrder.json" />
+    <Content Include="src\functions\test\ConstantProductPoolFactory.json" />
+    <Content Include="src\functions\test\MasterDeployer.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="research\" />
+    <Folder Include="research\MultiRouting\" />
+    <Folder Include="research\MultiRouting\src\" />
+    <Folder Include="research\MultiRouting\tests\" />
+    <Folder Include="src\" />
+    <Folder Include="src\abis\" />
+    <Folder Include="src\constants\" />
+    <Folder Include="src\entities\" />
+    <Folder Include="src\entities\Native\" />
+    <Folder Include="src\enums\" />
+    <Folder Include="src\functions\" />
+    <Folder Include="src\functions\test\" />
+    <Folder Include="src\interfaces\" />
+    <Folder Include="src\types\" />
+    <Folder Include="src\utils\" />
+    <Folder Include="test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouter1.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouter2.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouter3.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouterMath.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouterTypes.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\src\TopologicalSort.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\Env1.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\Env2.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\Env3.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\Env4.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\Env5.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\Env6.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\Env7Bridge.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\RouterExport.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\test.ts" />
+    <TypeScriptCompile Include="research\MultiRouting\tests\TestLib.ts" />
+    <TypeScriptCompile Include="src\constants\addresses.ts" />
+    <TypeScriptCompile Include="src\constants\index.ts" />
+    <TypeScriptCompile Include="src\constants\kashi.ts" />
+    <TypeScriptCompile Include="src\constants\natives.ts" />
+    <TypeScriptCompile Include="src\constants\numbers.ts" />
+    <TypeScriptCompile Include="src\constants\tokens.ts" />
+    <TypeScriptCompile Include="src\declarations.d.ts" />
+    <TypeScriptCompile Include="src\entities\AbstractCurrency.ts" />
+    <TypeScriptCompile Include="src\entities\ConstantProduct.test.ts" />
+    <TypeScriptCompile Include="src\entities\ConstantProductPool.ts" />
+    <TypeScriptCompile Include="src\entities\Currency.test.ts" />
+    <TypeScriptCompile Include="src\entities\Currency.ts" />
+    <TypeScriptCompile Include="src\entities\CurrencyAmount.test.ts" />
+    <TypeScriptCompile Include="src\entities\CurrencyAmount.ts" />
+    <TypeScriptCompile Include="src\entities\eip712.ts" />
+    <TypeScriptCompile Include="src\entities\Fraction.test.ts" />
+    <TypeScriptCompile Include="src\entities\Fraction.ts" />
+    <TypeScriptCompile Include="src\entities\index.ts" />
+    <TypeScriptCompile Include="src\entities\MultiRouter.ts" />
+    <TypeScriptCompile Include="src\entities\NativeCurrency.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Avalanche.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Binance.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Celo.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Ether.test.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Ether.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Fantom.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Harmony.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Heco.ts" />
+    <TypeScriptCompile Include="src\entities\Native\index.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Matic.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Movr.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Okex.ts" />
+    <TypeScriptCompile Include="src\entities\Native\Palm.ts" />
+    <TypeScriptCompile Include="src\entities\Native\xDai.ts" />
+    <TypeScriptCompile Include="src\entities\Pair.test.ts" />
+    <TypeScriptCompile Include="src\entities\Pair.ts" />
+    <TypeScriptCompile Include="src\entities\Percent.test.ts" />
+    <TypeScriptCompile Include="src\entities\Percent.ts" />
+    <TypeScriptCompile Include="src\entities\Price.test.ts" />
+    <TypeScriptCompile Include="src\entities\Price.ts" />
+    <TypeScriptCompile Include="src\entities\Route.test.ts" />
+    <TypeScriptCompile Include="src\entities\Route.ts" />
+    <TypeScriptCompile Include="src\entities\Token.test.ts" />
+    <TypeScriptCompile Include="src\entities\Token.ts" />
+    <TypeScriptCompile Include="src\entities\Trade.test.ts" />
+    <TypeScriptCompile Include="src\entities\Trade.ts" />
+    <TypeScriptCompile Include="src\enums\ChainId.ts" />
+    <TypeScriptCompile Include="src\enums\Fee.ts" />
+    <TypeScriptCompile Include="src\enums\index.ts" />
+    <TypeScriptCompile Include="src\enums\KashiAction.ts" />
+    <TypeScriptCompile Include="src\enums\OrderStatus.ts" />
+    <TypeScriptCompile Include="src\enums\Rounding.ts" />
+    <TypeScriptCompile Include="src\enums\TradeType.ts" />
+    <TypeScriptCompile Include="src\errors.ts" />
+    <TypeScriptCompile Include="src\functions\bentobox.ts" />
+    <TypeScriptCompile Include="src\functions\computeConstantProductPoolAddress.ts" />
+    <TypeScriptCompile Include="src\functions\computePairAddress.ts" />
+    <TypeScriptCompile Include="src\functions\computePoolInitCodeHash.ts" />
+    <TypeScriptCompile Include="src\functions\computePriceImpact.test.ts" />
+    <TypeScriptCompile Include="src\functions\computePriceImpact.ts" />
+    <TypeScriptCompile Include="src\functions\index.ts" />
+    <TypeScriptCompile Include="src\functions\kashi.ts" />
+    <TypeScriptCompile Include="src\functions\rebase.ts" />
+    <TypeScriptCompile Include="src\functions\sortedInsert.test.ts" />
+    <TypeScriptCompile Include="src\functions\sortedInsert.ts" />
+    <TypeScriptCompile Include="src\functions\sqrt.test.ts" />
+    <TypeScriptCompile Include="src\functions\sqrt.ts" />
+    <TypeScriptCompile Include="src\functions\validateAndParseAddress.test.ts" />
+    <TypeScriptCompile Include="src\functions\validateAndParseAddress.ts" />
+    <TypeScriptCompile Include="src\functions\validateSolidityTypeInstance.ts" />
+    <TypeScriptCompile Include="src\index.ts" />
+    <TypeScriptCompile Include="src\interfaces\AccrueInfo.ts" />
+    <TypeScriptCompile Include="src\interfaces\index.ts" />
+    <TypeScriptCompile Include="src\interfaces\Rebase.ts" />
+    <TypeScriptCompile Include="src\limitorder.ts" />
+    <TypeScriptCompile Include="src\router.test.ts" />
+    <TypeScriptCompile Include="src\router.ts" />
+    <TypeScriptCompile Include="src\types\AddressMap.ts" />
+    <TypeScriptCompile Include="src\types\BigIntIsh.ts" />
+    <TypeScriptCompile Include="src\types\index.ts" />
+    <TypeScriptCompile Include="src\types\LimitOrderTypes.ts" />
+    <TypeScriptCompile Include="src\types\MultiRouterTypes.ts" />
+    <TypeScriptCompile Include="src\types\TokenMap.ts" />
+    <TypeScriptCompile Include="src\utils\MultiRouterMath.ts" />
+    <TypeScriptCompile Include="src\utils\TopologicalSort.ts" />
+    <TypeScriptCompile Include="test\constants.test.ts" />
+    <TypeScriptCompile Include="test\entities.test.ts" />
+    <TypeScriptCompile Include="test\limitorder.test.ts" />
+    <TypeScriptCompile Include="test\multirouting.test.ts" />
+    <TypeScriptCompile Include="test\multiroutingcomplex.test.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
