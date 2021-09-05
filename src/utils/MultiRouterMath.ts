@@ -2,9 +2,9 @@ import { BigNumber } from '@ethersproject/bignumber'
 import {
   Pool,
   PoolType,
-  HybridPool,
-  WeightedPool,
-  ConcentratedLiquidityPool,
+  RHybridPool as HybridPool,
+  RWeightedPool as WeightedPool,
+  RConcentratedLiquidityPool as ConcentratedLiquidityPool,
   CL_MIN_TICK,
   CL_MAX_TICK
 } from '../types/MultiRouterTypes'

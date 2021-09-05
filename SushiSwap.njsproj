@@ -4,6 +4,10 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>SushiSwap</Name>
     <RootNamespace>SushiSwap</RootNamespace>
+    <JavaScriptTestRoot>
+    </JavaScriptTestRoot>
+    <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -16,12 +20,13 @@
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
-    <WorkingDirectory>.</WorkingDirectory>
+    <WorkingDirectory>
+    </WorkingDirectory>
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <EnableTypeScript>true</EnableTypeScript>
-    <StartWebBrowser>false</StartWebBrowser>
+    <StartWebBrowser>False</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,11 +40,6 @@
     <Content Include=".prettierrc.js" />
     <Content Include=".yarnrc" />
     <Content Include="LICENSE" />
-    <Content Include="research\MultiRouting\.gitignore" />
-    <Content Include="research\MultiRouting\package.json" />
-    <Content Include="research\MultiRouting\tsconfig.json" />
-    <Content Include="research\MultiRouting\webpack.config.js" />
-    <Content Include="research\MultiRouting\yarn.lock" />
     <Content Include="src\abis\ERC20.json" />
     <Content Include="src\abis\StopLimitOrder.json" />
     <Content Include="src\functions\test\ConstantProductPoolFactory.json" />
@@ -49,10 +49,6 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="research\" />
-    <Folder Include="research\MultiRouting\" />
-    <Folder Include="research\MultiRouting\src\" />
-    <Folder Include="research\MultiRouting\tests\" />
     <Folder Include="src\" />
     <Folder Include="src\abis\" />
     <Folder Include="src\constants\" />
@@ -67,22 +63,6 @@
     <Folder Include="test\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouter1.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouter2.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouter3.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouterMath.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\src\MultiRouterTypes.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\src\TopologicalSort.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\Env1.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\Env2.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\Env3.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\Env4.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\Env5.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\Env6.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\Env7Bridge.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\RouterExport.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\test.ts" />
-    <TypeScriptCompile Include="research\MultiRouting\tests\TestLib.ts" />
     <TypeScriptCompile Include="src\constants\addresses.ts" />
     <TypeScriptCompile Include="src\constants\index.ts" />
     <TypeScriptCompile Include="src\constants\kashi.ts" />
@@ -168,11 +148,21 @@
     <TypeScriptCompile Include="src\types\TokenMap.ts" />
     <TypeScriptCompile Include="src\utils\MultiRouterMath.ts" />
     <TypeScriptCompile Include="src\utils\TopologicalSort.ts" />
-    <TypeScriptCompile Include="test\constants.test.ts" />
-    <TypeScriptCompile Include="test\entities.test.ts" />
-    <TypeScriptCompile Include="test\limitorder.test.ts" />
-    <TypeScriptCompile Include="test\multirouting.test.ts" />
-    <TypeScriptCompile Include="test\multiroutingcomplex.test.ts" />
+    <Compile Include="test\constants.test.ts">
+      <TestFramework>Jest</TestFramework>
+    </Compile>
+    <Compile Include="test\entities.test.ts">
+      <TestFramework>Jest</TestFramework>
+    </Compile>
+    <Compile Include="test\limitorder.test.ts">
+      <TestFramework>Jest</TestFramework>
+    </Compile>
+    <Compile Include="test\multirouting.test.ts">
+      <TestFramework>Jest</TestFramework>
+    </Compile>
+    <Compile Include="test\multiroutingcomplex.test.ts">
+      <TestFramework>Jest</TestFramework>
+    </Compile>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
